@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:mytask/confg/color.dart';
 import 'package:mytask/confg/text_theme.dart';
+import 'package:mytask/presentation/pages/setting/setting_page.dart';
 import 'package:mytask/presentation/widgets/custom_button_widget.dart';
 import 'package:mytask/presentation/widgets/custom_text_form_widget.dart';
 import 'package:mytask/presentation/widgets/custom_text_widget.dart';
@@ -22,7 +24,7 @@ class ConfirmWidget extends StatelessWidget {
             style: textThemeData.headlineSmall,
           ),
           SizedBox(
-            height:70,
+            height: 70,
           ),
           buildPassword(),
           SizedBox(
@@ -32,7 +34,7 @@ class ConfirmWidget extends StatelessWidget {
           SizedBox(
             height: 90,
           ),
-          buildSignUpButton(),
+          buildSignUpButton(context),
         ],
       ),
     );
@@ -66,10 +68,11 @@ class ConfirmWidget extends StatelessWidget {
         ],
       );
 
-  buildSignUpButton() => CustomButtonWidget(
+  buildSignUpButton(context) => CustomButtonWidget(
         color: blue,
         txt: 'Sign Up',
         style: textThemeData.bodyLarge!.copyWith(color: white),
-        onPress: () {},
+        onPress: () => Navigator.push(
+            context, MaterialPageRoute(builder: (context) => SettingPage())),
       );
 }
