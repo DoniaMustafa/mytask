@@ -13,7 +13,7 @@ class TransactionWidget extends StatefulWidget {
 }
 
 class _TransactionWidgetState extends State<TransactionWidget> {
-  bool isOpen = true;
+  bool isOpen = false;
   changeState() {
     setState(() {
       isOpen = !isOpen;
