@@ -94,7 +94,7 @@ class _TransactionWidgetState extends State<TransactionWidget> {
               ),
             ),
             SizedBox(height: 15.0),
-            // PaymentHistoryWidget(isSelect:isSelect ,)
+            PaymentHistoryWidget(isSelect:isSelect[0] ,)
           ],
         ),
       );
