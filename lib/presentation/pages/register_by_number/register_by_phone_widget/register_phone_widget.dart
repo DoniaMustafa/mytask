@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mytask/confg/color.dart';
 import 'package:mytask/confg/text_theme.dart';
 import 'package:mytask/presentation/pages/login_phone/login_by_phone_page.dart';
+import 'package:mytask/presentation/pages/otp/OTP_page.dart';
 import 'package:mytask/presentation/pages/register_by_number/register_by_number_page.dart';
 import 'package:mytask/presentation/widgets/custom_button_widget.dart';
 import 'package:mytask/presentation/widgets/custom_text_create_account_widget.dart';
@@ -70,7 +71,7 @@ class RegisterByPhoneWidget extends StatelessWidget {
         txt: 'Next',
     style: textThemeData.titleLarge!.copyWith(color: white),
         onPress: () =>Navigator.push(context,
-            MaterialPageRoute(builder: (context) => RegisterByPhonePage())),
+            MaterialPageRoute(builder: (context) => OTPPage())),
       );
   buildCreateAccount(context) => GestureDetector(
     onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>const LoginByPhonePage())),
